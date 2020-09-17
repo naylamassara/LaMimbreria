@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+
+
+nav{
+    background-color:#ddbea9;
+    box-shadow: 0px 7px 11px 0px rgba(203, 153, 126, 0.44);
+}
+main{
+    text-align: center;
+    font-family: "https://fonts.googleapis.com/css2?family=Marvel&family=Roboto:wght@100&display=swap";
+    color:  #cb997e;
+}
+.contacto{
+    background-color: #f0efeb;
+}
+
+.division{
+    background-color: #f0efeb;
+}
+
+.footer{
+    background-color:#b7b7a4;
+}
+
+
+}
+
