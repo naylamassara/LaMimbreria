@@ -32,6 +32,7 @@ function validarDatos2() {
 
 var listaDeDeseo= []
 
+
 class carteras{
     constructor(nombre, precio) {
         this.nombre = nombre;
@@ -65,5 +66,18 @@ document.getElementById("alejandrita").onclick = function listaDeDeseos() {
 }
 
 /* listaDeDeseo.forEach(element => {
-    
-}) */
+    var nuevo= document.createElement("li") 
+    nuevo.textContent= element                   
+    var lista=document.querySelector(".lista")
+    lista.appenChild(nuevo)          
+})  */
+
+/* listaDeDeseo.forEach(element => {
+    var li= document.createElement("li") 
+    li.textContent= element                   
+    var ul=document.querySelector(".lista")
+    ul.appenChild(li)          
+}) 
+ */
+
+listaDeDeseo.forEach(element => console.log("paso adentro"));
