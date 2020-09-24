@@ -32,7 +32,6 @@ function validarDatos2() {
 
 var listaDeDeseo= []
 
-
 class carteras{
     constructor(nombre, precio) {
         this.nombre = nombre;
@@ -45,39 +44,80 @@ var carteraJade = new carteras("Jade",1700);
 var carteraAghata = new carteras("Aghata",1500);
 var carteraAlejandrita = new carteras("Alejandrita",2000);
 
-document.getElementById("jade").onclick = function listaDeDeseos() {
-listaDeDeseo.push("carteraJade")
-alert ("Agregaste la cartera Jade a tu lista de deseos")
+
+document.querySelector("#jade").onclick = function listaDeDeseos() {
+    listaDeDeseo.push("carteraJade")
+    alert ("Agregaste la cartera Jade a tu lista de deseos")
+    var insertarALista = document.createElement("li");
+    insertarALista.innerHTML = "Cartera Jade";
+    document.querySelector(".lista").appendChild(insertarALista);
 }
 
-document.getElementById("aghata").onclick = function listaDeDeseos() {
+
+document.querySelector("#aghata").onclick = function listaDeDeseos() {
     listaDeDeseo.push("carteraAghata")
     alert ("Agregaste la cartera Aghata a tu lista de deseos")
+    var insertarALista = document.createElement("li");
+    insertarALista.innerHTML = "Cartera Aghata";
+    document.querySelector(".lista").appendChild(insertarALista);
 }
 
-document.getElementById("amatista").onclick = function listaDeDeseos() {
+document.querySelector("#amatista").onclick = function listaDeDeseos() {
     listaDeDeseo.push("carteraAmatista")
     alert ("Agregaste la cartera Amatista a tu lista de deseos")
+    var insertarALista = document.createElement("li");
+    insertarALista.innerHTML = "Cartera Amatista";
+    document.querySelector(".lista").appendChild(insertarALista);
 }
 
-document.getElementById("alejandrita").onclick = function listaDeDeseos() {
+
+document.querySelector("#alejandrita").onclick = function listaDeDeseos() {
     listaDeDeseo.push("carteraAlejandrita")
     alert ("Agregaste la cartera Alejandrita a tu lista de deseos")
+    var insertarALista = document.createElement("li");
+    insertarALista.innerHTML = "Cartera Alejandrita";
+    document.querySelector(".lista").appendChild(insertarALista);
 }
 
+
+
+/* 
+
+
+function myFunction() {
+    var para = document.createElement("li");
+    para.innerHTML = "cartera";
+    document.querySelector(".lista").appendChild(para);
+  }
+
+
+ */
+
+    // function impimirEnLista (carteras){
+    // var nuevo= document.createElement("li") 
+    // nuevo .innerHTML= "carteras"                   
+    // var lista=document.querySelector(".lista")
+    // lista.appenChild(nuevo)
+    // }
+
+    // impimirEnLista("cartera")
+
+    // const content = element.insertAdjacentHTML("nayla")
+/* 
 /* listaDeDeseo.forEach(element => {
     var nuevo= document.createElement("li") 
     nuevo.textContent= element                   
     var lista=document.querySelector(".lista")
     lista.appenChild(nuevo)          
 })  */
-
-/* listaDeDeseo.forEach(element => {
-    var li= document.createElement("li") 
-    li.textContent= element                   
-    var ul=document.querySelector(".lista")
-    ul.appenChild(li)          
-}) 
- */
-
-listaDeDeseo.forEach(element => console.log("paso adentro"));
+/* function agregarALista(element) {
+    
+    listaDeDeseo.forEach(element => {
+        var li= document.createElement("li") 
+        li.textContent= element                   
+        var ul=document.querySelector(".lista")
+        ul.appenChild(li)          
+    })
+    
+    listaDeDeseo.forEach(element => console.log("paso adentro"))
+    } */
