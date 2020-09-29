@@ -70,16 +70,23 @@ document.querySelector("#amatista").onclick = function listaDeDeseos() {
     document.querySelector(".lista").appendChild(insertarALista);
 }
 
-
+/* 
 document.querySelector("#alejandrita").onclick = function listaDeDeseos() {
     listaDeDeseo.push("carteraAlejandrita")
     alert ("Agregaste la cartera Alejandrita a tu lista de deseos")
     var insertarALista = document.createElement("li");
     insertarALista.innerHTML = "Cartera Alejandrita";
     document.querySelector(".lista").appendChild(insertarALista);
-}
+} */
 
-
+const cartera3= document.querySelector("#alejandrita")
+cartera3.addEventListener("click", ()=>{
+    listaDeDeseo.push("carteraAlejandrita")
+    alert ("Agregaste la cartera Alejandrita a tu lista de deseos")
+    var insertarALista = document.createElement("li");
+    insertarALista.innerHTML = "Cartera Alejandrita";
+    document.querySelector(".lista").appendChild(insertarALista);   
+})
 
 /* 
 
