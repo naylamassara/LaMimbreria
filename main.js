@@ -1,5 +1,6 @@
 //alert('¡Bienvenida a nuestro sitio! Para recibir novedades y promociones no dejes de subscribirte');
 
+
 function validarDatos() {
     var email = document.getElementById("email").value;
     var clave = document.getElementById("clave").value;
@@ -68,6 +69,7 @@ document.querySelector("#amatista").onclick = function listaDeDeseos() {
     var insertarALista = document.createElement("li");
     insertarALista.innerHTML = "Cartera Amatista";
     document.querySelector(".lista").appendChild(insertarALista);
+    localStorage.setItem (insertarALista)
 }
 
 /* 
