@@ -36,6 +36,7 @@ wishList.forEach(productName => addToList(productName))
 
 document.querySelectorAll('.target-cartera').forEach(boton => {
     boton.onclick = () => {
+       
         var productName = boton.parentNode.parentNode.childNodes[1].textContent
         if (wishList.indexOf(productName) === -1) {
             wishList.push(productName)
@@ -47,22 +48,40 @@ document.querySelectorAll('.target-cartera').forEach(boton => {
         }
     }
 })
+ 
+ function addToList(productName) {
+     var insertarALista = document.createElement("li");
+     insertarALista.innerHTML = productName;
+     document.querySelector(".lista").appendChild(insertarALista);
+ } 
 
-function addToList(productName) {
-    var insertarALista = document.createElement("li");
-    insertarALista.innerHTML = productName;
-    document.querySelector(".lista").appendChild(insertarALista);
-}
+ $("nav").hover(function(){
+    $(this).css("background-color", "#cb997e");
+    }, function(){
+    $(this).css("background-color", "#ddbea9");
+  });
+
+  $("#hoverLogo").hover(function(){
+    $(this).css("width", "50")
+    $(this).css("height", "50");
+    }, function(){
+    $(this).css("width", "30")
+    $(this).css("height", "30");
+  });
+
+// const cartera3 = document.querySelector("#alejandrita")
+// cartera3.addEventListener("click", () => {
+//     listaDeDeseo.push("carteraAlejandrita")
+//     alert("Agregaste la cartera Alejandrita a tu lista de deseos")
+//     var insertarALista = document.createElement("li");
+//     insertarALista.innerHTML = "Cartera Alejandrita";
+//     document.querySelector(".lista").appendChild(insertarALista);
+// })
 
 
-const cartera3 = document.querySelector("#alejandrita")
-cartera3.addEventListener("click", () => {
-    listaDeDeseo.push("carteraAlejandrita")
-    alert("Agregaste la cartera Alejandrita a tu lista de deseos")
-    var insertarALista = document.createElement("li");
-    insertarALista.innerHTML = "Cartera Alejandrita";
-    document.querySelector(".lista").appendChild(insertarALista);
-})
+
+
+
 
 /*
 
