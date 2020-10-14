@@ -10,6 +10,19 @@
     <script defer src="main.js"></script>
 
     <title>LaMimbrería</title>
+    <!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#botonsesion").click(function () {
+                $.ajax({
+                    url: "demo_test.txt", success: function (result) {
+                        console.log(result);
+                    }
+                });
+            });
+        });
+    </script> -->
 
     <meta name="description" content="Venta de cestería y artículos de mimbre">
     <meta name="keywords" content="mimbre, palma, yute, carteras, canastos, sobres">
@@ -51,18 +64,17 @@
                     <form>
                         <div class="form-row">
                             <div class="form-group col-md-4 ">
-                                <label for="inputnombre">Email</label>
-                                <input type="text" class="form-control" id="email">
+                                <label for="name">Email</label>
+                                <input type="text" class="form-control" name="name" id="email">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4 ">
-                                <label for="inputnombre">Contraseña</label>
-                                <input type="text" class="form-control" id="clave">
+                                <label for="password">Contraseña</label>
+                                <input type="password" class="form-control" name="password" id="clave">
                             </div>
                         </div>
-                        <button onclick="validarDatos()" type="submit" class="btn btn-light p-0"
-                            id=botonsesion>Send</button>
+                        <button class="btn btn-light p-0" id=botonsesion>Send</button>
 
                     </form>
                 </div>
@@ -83,24 +95,24 @@
                             <div class="form-row">
                                 <div class="form-group col-md-4 ">
                                     <label for="inputnombre">Contraseña</label>
-                                    <input type="text" class="form-control" id="clave2">
+                                    <input type="password" class="form-control" id="clave2">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-4 ">
                                     <label for="inputnombre">Confirmar contraseña</label>
-                                    <input type="text" class="form-control" id="confirmarclave2">
+                                    <input type="password" class="form-control" id="confirmarclave2">
                                 </div>
                             </div>
-                            <button onclick="validarDatos2()" type="submit" class="btn btn-light p-0"
+                            <button onclick="registrar()" type="submit" class="btn btn-light p-0"
                                 id=botonsesion>Send</button>
-    
+
                         </form>
                     </div>
                 </div>
             </div>
-    
-        
+
+
     </section>
 
 
@@ -150,9 +162,7 @@
 
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
