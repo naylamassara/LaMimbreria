@@ -1,4 +1,3 @@
-//alert('¡Bienvenida a nuestro sitio! Para recibir novedades y promociones no dejes de subscribirte');
 
 $("#botonsesion").click(function (event) {
     event.preventDefault()
@@ -9,7 +8,7 @@ $("#botonsesion").click(function (event) {
         welcomeUser(email)
     }
     else {
-        alert("El usuario y contreseña no son validos")
+        alert("El usuario y contraseña no son validos")
     }
 
 })
@@ -19,7 +18,7 @@ function welcomeUser(email) {
         url: "usuario.json", success: function (data) {
 
             const user = data.filter(usuario => usuario.email === email)
-            alert(`Bienvenida ${user[0].firstname}`)
+            Swal.fire(`Bienvenida ${user[0].firstname}`)
         }
     });
 }
@@ -28,8 +27,6 @@ function registrar() {
     var email = document.getElementById("email2").value;
     var clave = document.getElementById("clave2").value;
     var confirmarclave = document.getElementById("confirmarclave2").value;
-
-    login(email, clave)
 
     if (email != 0 && clave != 0 && clave === confirmarclave) {
         alert("Su cuenta se ha creado con éxito")
@@ -42,6 +39,9 @@ function registrar() {
     }
 }
 
+
+
+/*lista de deseos del home*/
 
 var wishList = localStorage.getItem('wishList') ? JSON.parse(localStorage.getItem('wishList')) : []
 
